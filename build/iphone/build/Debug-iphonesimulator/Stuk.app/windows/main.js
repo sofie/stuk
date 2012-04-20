@@ -1,0 +1,1 @@
+/Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/main.js

@@ -1,0 +1,1 @@
+/Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/nieuws_detail.js
