@@ -94,7 +94,11 @@
 					var heading = Ti.UI.createLabel(Stuk.combine(style.textBlueBold, {
 						text : cdbHeading
 					}));
-					cdbDescription = cdbDescription.replace(/\n/gi, " ");
+					var description = Ti.UI.createLabel(Stuk.combine(style.textDescriptionDetail, {
+						text : cdbDescription
+					}));
+					
+					/*cdbDescription = cdbDescription.replace(/\n/gi, " ");
 					var HtmlParser = function(cdbDescription) {
 						var html = cdbDescription;
 						var urlRegex = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
@@ -105,9 +109,11 @@
 					};
 					var parser = new HtmlParser(cdbDescription);
 					var web = Ti.UI.createWebView(Stuk.combine(style.webViewDescription, {
-						html : "<div style=\"font-family: " + Stuk.basic_font + "; font-size:12px; color:#464646; line-height:15px;\">" + parser.getHTML() + "</div>"
+						//html : "<div style=\"font-family: " + Stuk.basic_font + "; font-size:12px; color:#464646; line-height:15px;\">" + parser.getHTML() + "</div>",
+						url:cdbDescription
 					}));
-
+					*/
+					
 					if(cdbPrijs !== undefined) {
 						var price = Ti.UI.createLabel(Stuk.combine(style.textPrice, {
 							text : cdbPrijs.pricedescription
@@ -125,29 +131,17 @@
 						}
 					};
 					
-					//tickets link op eerste lijn zetten van prijs
-					if(price.height < 20) {
-						var ticketTop = style.textTickets1Lijn;
-						var pijlTop = style.textTicketsPijl1Lijn;
-					} else {
-						ticketTop = style.textTickets2Lijnen;
-						pijlTop = style.textTicketsPijl2Lijnen;
-					}
-
-					var ticketsLink = Ti.UI.createLabel(Stuk.combine(ticketTop, {
-						text : 'tickets'
-					}));
-					var ticketsPijl = Ti.UI.createLabel(Stuk.combine(pijlTop, {
-						text : '»'
+					var tickets = Ti.UI.createLabel(Stuk.combine(style.textTickets, {
+						text : 'tickets »'
 					}));
 
 					//Als optreden gratis, ticketlink verbergen
 					if(cdbPrijs.pricevalue === '0.00') {
-						ticketsLink.hide();
-						ticketsPijl.hide();
+						//ticketsLink.hide();
+						tickets.hide();
 					};
 
-					ticketsLink.addEventListener('click', function(e) {
+					tickets.addEventListener('click', function(e) {
 						windowLink.open({
 							modal : true,
 							modalTransitionStyle : Ti.UI.iPhone.MODAL_TRANSITION_STYLE_COVER_VERTICAL,
@@ -178,7 +172,7 @@
 
 					windowLink.add(webview);
 
-					//Donker rode balk
+					//Footer
 					var footer = Titanium.UI.createView(style.footerView);
 
 					var organiser = Titanium.UI.createLabel(Stuk.combine(style.textFooter, {
@@ -212,10 +206,10 @@
 					scrollView.add(name);
 					scrollView.add(date);
 					scrollView.add(heading);
-					scrollView.add(web);
+					scrollView.add(description);
+					scrollView.add(tickets);
 					scrollView.add(price);
-					scrollView.add(ticketsPijl);
-					scrollView.add(ticketsLink);
+					
 					scrollView.add(footer);
 
 					detailWin.add(scrollView);

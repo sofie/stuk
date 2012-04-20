@@ -92,8 +92,7 @@ Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
 				backgroundImage : "img/btn_deze_week.png",
 				width : 73,
 				height : 35,
-				left : 120,
-				//right:'auto'
+				left : 120
 			});
 			dezeWeekButton.addEventListener('click', function() {
 				url = 'http://build.uitdatabank.be/api/events/search?format=json&key=' + Stuk.api_key + '&organiser=' + Stuk.organizer + '&datetype=thisweek';

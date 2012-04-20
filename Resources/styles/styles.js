@@ -161,16 +161,16 @@
 			height : 40,
 			left : 20,
 			right : 0,
-			top : -15,
+			top : 20,
 			bottom : 10
 		},
 		webViewDescription : {
-			backgroundColor : 'transparent',
+			/*backgroundColor : 'transparent',
 			touchEnabled : false,
 			width : 270,
 			height : 'auto',
 			top : 5,
-			left:22
+			left:22*/
 		},
 		webViewFeed : {
 			width : 440,
@@ -289,9 +289,8 @@
 				fontSize : 13
 			},
 			width : 'auto',
-			height : 'auto',
+			height : 15,
 			left : 30,
-			right : 'auto',
 			top:0
 		},
 		textGreyBold : {
@@ -303,10 +302,20 @@
 				fontSize : 13
 			},
 			width : 280,
-			height : 'auto',
 			left : 30,
-			top:15,
-			right : 'auto'
+			top:15
+		},
+		textDescriptionDetail : {
+			textAlign : 'left',
+			font : {
+				fontFamily : 'Arial',
+				fontSize : 12
+			},
+			color : '#464646',
+			left:30,
+			right:30,
+			top:10,
+			height:'auto'
 		},
 		textPrice : {
 			textAlign : 'left',
@@ -315,13 +324,13 @@
 				fontFamily : 'Arial',
 				fontSize : 12
 			},
+			height:'auto',
 			width : 'auto',
-			height : 'auto',
 			left : 30,
-			right : 'auto',
-			top:0
+			top:-14
 		},
-		textTickets1Lijn : {
+		
+		textTickets:{
 			textAlign : 'left',
 			font : {
 				fontFamily : 'Arial',
@@ -329,49 +338,9 @@
 				fontWeight: 'bold'
 			},
 			color : '#2D6883',
-			top : -17,
-			right : 40,
-			bottom : 40,
-			width : 'auto',
-			height : 'auto'
-		},
-		textTicketsPijl1Lijn:{
-			textAlign : 'left',
-			font : {
-				fontFamily : 'Arial',
-				fontSize : 14
-			},
-			color : '#464646',
-			top : -15,
-			right :30,
-			width : 'auto',
-			height : 'auto'
-		},	
-		textTickets2Lijnen : {
-			textAlign : 'left',
-			font : {
-				fontFamily : 'Arial',
-				fontSize : 12,
-				fontWeight: 'bold'
-			},
-			color : '#2D6883',
-			top : -17,
-			right : 40,
-			bottom : 40,
-			width : 'auto',
-			height : 'auto'
-		},
-		textTicketsPijl2Lijnen:{
-			textAlign : 'left',
-			font : {
-				fontFamily : 'Arial',
-				fontSize : 14
-			},
-			color : '#464646',
-			top : -33,
-			right :30,
-			width : 'auto',
-			height : 'auto'
+			top : 20,
+			left :245,
+			height:12
 		},		
 		textFooter : {
 			textAlign : 'left',
@@ -381,6 +350,7 @@
 			},
 			color : '#464646'
 		},
+		
 		SearchField : {
 			color : '#b3b3b3',
 			font : {
@@ -450,7 +420,6 @@
 				fontSize : 11,
 				fontWeight : 'bold'
 			},
-			height : 'auto',
 			width : 270,
 			top : 5,
 			left : 20,
