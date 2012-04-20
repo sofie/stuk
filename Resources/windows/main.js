@@ -8,7 +8,7 @@ Ti.include(
 	
 	'/windows/concerten.js', 
 	'/windows/nieuws.js', 
-	'/windows/locatie.js'
+	'/windows/locatie.js' 
 );
 
 (function() {
