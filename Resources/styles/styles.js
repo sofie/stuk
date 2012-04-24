@@ -32,7 +32,7 @@
 			showVerticalScrollIndicator : true,
 			layout : 'vertical',
 			top : 0,
-			bottom : 45,
+			bottom : 40,
 			verticalBounce:true
 		},
 
@@ -291,7 +291,6 @@
 				fontWeight : 'bold',
 				fontSize : 13
 			},
-			width : 'auto',
 			height : 15,
 			left : 30,
 			top:0
@@ -326,7 +325,6 @@
 				fontFamily : 'Arial',
 				fontSize : 12
 			},
-			width : 'auto',
 			left : 30,
 			//top:-14 als ticket wel op window
 			top:20
@@ -367,7 +365,6 @@
 		},
 
 		textInstruction : {
-			width : 'auto',
 			font : {
 				fontFamily : 'Arial',
 				fontSize : 13

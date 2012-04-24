@@ -19,6 +19,7 @@
 			Titanium.App.navTab1.close(detailWin, {
 				animated : false
 			});
+			
 		});
 		detailWin.leftNavButton = backButton;
 
@@ -54,14 +55,25 @@
 					var cdbDescription = detail.event.eventdetails.eventdetail.shortdescription;
 
 					var scrollView = Titanium.UI.createScrollView(style.scrollView);
+					
 
 					//Als er geen foto is, foto weglaten
+					/*if (Ti.Platform.displayCaps.density === 'high') {
+						  Ti.API.info('Retina');
+					     var crop = '?width=640&height=350&crop=auto';
+					   
+					}else{
+						Ti.API.info('Gewoon');
+						crop ='?width=320&height=175&crop=auto';
+					};*/
+					var crop ='?width=320&height=175&crop=auto';
+					
 					if(cdbImg !== undefined) {
 						if(cdbImg.file[0] !== undefined) {
-							cdbImg = cdbImg.file[0].hlink + '?width=320&height=175&crop=auto';
+							cdbImg = cdbImg.file[0].hlink + crop;
 						} else {
 							if(cdbImg.file.hlink!=='http:\/\/www.stuk.be'){
-								cdbImg = cdbImg.file.hlink + '?width=320&height=175&crop=auto';
+								cdbImg = cdbImg.file.hlink + crop;
 							}else{
 								cdbImg='img/no_img.png'
 							}
@@ -70,10 +82,11 @@
 						cdbImg = 'img/no_img.png'
 					}
 					
-					var image = Ti.UI.createImageView(Stuk.combine(style.Img320, {
-						image : cdbImg,
+					var image = Ti.UI.createView(Stuk.combine(style.Img320, {
+						backgroundImage : cdbImg,
 						defaultImage:'img/default_img.png'
 					}));
+					Ti.API.info(image.backgroundImage);
 
 					scrollView.add(image);
 
@@ -125,7 +138,6 @@
 
 					//Als optreden gratis, ticketlink verbergen
 					if(cdbPrijs.pricevalue === '0.00') {
-						//ticketsLink.hide();
 						tickets.hide();
 					};
 

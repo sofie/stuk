@@ -92,13 +92,19 @@
 						var imgThumb = strImg + '?width=108&height=80&crop=auto';
 
 						var row = Ti.UI.createTableViewRow(style.tableViewRow);
+						
+						if (Ti.Platform.displayCaps.density === 'high') {
+						     var imgThumb = strImg + '?width=216&height=160&crop=auto';
+						}else{
+							imgThumb = strImg + '?width=108&height=80&crop=auto';
+						};
 
 						if(cdbImg === '') {
 							imgThumb = 'img/no_thumb.png';
 						}
 
 						var image = Titanium.UI.createImageView(Stuk.combine(style.Img90,{
-							image : imgThumb
+							backgroundImage : imgThumb
 						}));
 
 						var name = Ti.UI.createLabel(Stuk.combine(style.titleNaam,{

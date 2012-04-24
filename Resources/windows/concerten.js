@@ -141,18 +141,24 @@ Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
 
 						var cdbImg = list[i].thumbnail;
 						var strImg = cdbImg.substr(0, 77);
-						var imgThumb = strImg + '?width=108&height=80&crop=auto';
+						//var imgThumb = strImg + '?width=108&height=80&crop=auto';
 
 						var row = Ti.UI.createTableViewRow(style.tableViewRow);
+						
+						if (Ti.Platform.displayCaps.density === 'high') {
+						     var imgThumb = strImg + '?width=216&height=160&crop=auto';
+						}else{
+							imgThumb = strImg + '?width=108&height=80&crop=auto';
+						};
 
 						if(cdbImg === '') {
 							imgThumb = 'img/no_thumb.png';
 						};
 
-						var image = Titanium.UI.createImageView(Stuk.combine(style.Img90, {
-							image : imgThumb
+						var image = Titanium.UI.createView(Stuk.combine(style.Img90, {
+							backgroundImage : imgThumb
 						}));
-
+						
 						var name = Ti.UI.createLabel(Stuk.combine(style.titleNaam, {
 							text : cdbNaam
 						}));
@@ -189,8 +195,8 @@ Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
 						Titanium.App.selectedIndex = list[e.index].cdbid;
 						Titanium.API.info(Titanium.App.selectedIndex);
 						Titanium.App.rowIndex = e.index;
-
-						Titanium.App.navTab1.open(Stuk.ui.createConcertDetailWindow(), {
+						
+						Titanium.App.navTab1.open( Stuk.ui.createConcertDetailWindow(), {
 							animated : false
 						});
 					});
