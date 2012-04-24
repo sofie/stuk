@@ -35,7 +35,7 @@
 			navActInd.show();
 		});
 		
-		var prev = Titanium.UI.createButton(style.prevButton);
+		/*var prev = Titanium.UI.createButton(style.prevButton);
 		
 		var next = Titanium.UI.createButton(style.nextButton);
 		
@@ -44,7 +44,7 @@
 		toolbarView.add(prev);
 		toolbarView.add(next);
 		detailWin.add(toolbarView);
-		
+		*/
 		
 		/*
 		flexSpace = Titanium.UI.createButton({

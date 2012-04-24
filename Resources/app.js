@@ -11,6 +11,7 @@ var Stuk = {
 
 	tab1_name : 'Programma',
 	tab2_name : 'Nieuws',
+	tab3_name:'Locatie',
 
 	//Tabgroup
 	customTab1 : 'btn_programma.png',
@@ -25,11 +26,6 @@ var Stuk = {
 
 Ti.include('windows/main.js');
 
-/*if(Titanium.Network.online===false){
-	Titanium.UI.createAlertDialog({
-		title:'Geen internet'
-	}).show();
-}else{*/
-	Stuk.ui.createApplicationMainWin();
-//}
+Stuk.ui.createApplicationMainWin();
+
 

@@ -94,25 +94,13 @@
 					var heading = Ti.UI.createLabel(Stuk.combine(style.textBlueBold, {
 						text : cdbHeading
 					}));
+					
+					cdbDescription = cdbDescription.replace(/<br \/>/gi, " ");
+
 					var description = Ti.UI.createLabel(Stuk.combine(style.textDescriptionDetail, {
 						text : cdbDescription
 					}));
 					
-					/*cdbDescription = cdbDescription.replace(/\n/gi, " ");
-					var HtmlParser = function(cdbDescription) {
-						var html = cdbDescription;
-						var urlRegex = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
-
-						this.getHTML = function() {
-							return html;
-						};
-					};
-					var parser = new HtmlParser(cdbDescription);
-					var web = Ti.UI.createWebView(Stuk.combine(style.webViewDescription, {
-						//html : "<div style=\"font-family: " + Stuk.basic_font + "; font-size:12px; color:#464646; line-height:15px;\">" + parser.getHTML() + "</div>",
-						url:cdbDescription
-					}));
-					*/
 					
 					if(cdbPrijs !== undefined) {
 						var price = Ti.UI.createLabel(Stuk.combine(style.textPrice, {
@@ -207,7 +195,7 @@
 					scrollView.add(date);
 					scrollView.add(heading);
 					scrollView.add(description);
-					scrollView.add(tickets);
+					//scrollView.add(tickets);
 					scrollView.add(price);
 					
 					scrollView.add(footer);

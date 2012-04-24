@@ -164,18 +164,11 @@
 			top : 20,
 			bottom : 10
 		},
-		webViewDescription : {
-			/*backgroundColor : 'transparent',
-			touchEnabled : false,
-			width : 270,
-			height : 'auto',
-			top : 5,
-			left:22*/
-		},
+		
 		webViewFeed : {
 			width : 440,
 			left : 0,
-			top : 25,
+			top :0,
 			bottom : 40
 		},
 		
@@ -205,17 +198,28 @@
 				fontSize : 14
 			}
 		},
-		textLocation:{
+		textLocationTitle:{
 			color : '#464646',
 			font : {
 				fontFamily : 'Arial',
 				fontWeight : 'bold',
 				fontSize : 14
 			},
-			top:10,
+			top:20,
 			left:30,
 			width:260,
 			height:30
+		},
+		textLocation:{
+			color : '#2F6885',
+			font : {
+				fontFamily : 'Arial',
+				fontWeight : 'bold',
+				fontSize : 14
+			},
+			top:20,
+			left:30,
+			width:260
 		},
 		textPerformers : {
 			left : 115,
@@ -245,7 +249,6 @@
 		textLocationDescription : {
 			left : 30,
 			width : 260,
-			height : 14,
 			top:0,
 			textAlign : 'left',
 			color : '#464646',
@@ -314,8 +317,7 @@
 			color : '#464646',
 			left:30,
 			right:30,
-			top:10,
-			height:'auto'
+			top:10
 		},
 		textPrice : {
 			textAlign : 'left',
@@ -324,10 +326,10 @@
 				fontFamily : 'Arial',
 				fontSize : 12
 			},
-			height:'auto',
 			width : 'auto',
 			left : 30,
-			top:-14
+			//top:-14 als ticket wel op window
+			top:20
 		},
 		
 		textTickets:{
