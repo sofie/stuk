@@ -30,7 +30,7 @@ Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
 
 
 		if(!Titanium.Network.online) {
-			var lblNoInternet = Ti.UI.createLabel(Stuk.combine(style.textNoList, {
+			var lblNoInternet = Ti.UI.createLabel(Stuk.combine(style.textError, {
 				text : 'Kan geen connectie maken met internet. Refresh of controleer uw verbinding.',
 				left:20,
 				right:20

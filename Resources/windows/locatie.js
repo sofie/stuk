@@ -57,7 +57,7 @@
 		var viewBgTitle = Titanium.UI.createView(style.viewTitleBg);
 		scrollView.add(viewBgTitle);
 		var name = Titanium.UI.createLabel(Stuk.combine(style.titleDetail, {
-			text : 'Wegbeschrijving'
+			text : 'wegbeschrijving'
 		}));
 		scrollView.add(name);
 

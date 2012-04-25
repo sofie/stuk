@@ -39,10 +39,18 @@
 		//
 		searchBar.addEventListener('return',function(){
 			if(Titanium.App.datalist===0){
-				var lblNo = Titanium.UI.createLabel(Stuk.combine(style.textNoList,{
+				var lblNo = Titanium.UI.createLabel(Stuk.combine(style.textError,{
 					text : 'Geen optredens gevonden.',
 				}));
 				searchWin.add(lblNo);
+			}
+			if(!Titanium.Network.online) {
+				var lblNoInternet = Ti.UI.createLabel(Stuk.combine(style.textError, {
+					text : 'Kan geen connectie maken met internet. Controleer uw verbinding.',
+					left : 20,
+					right : 20
+				}));
+				searchWin.add(lblNoInternet);
 			}
 		});
 		
@@ -157,10 +165,11 @@
 					alert(e);
 				}
 			}
-			getReq.onerror = function(e) {
+			/*getReq.onerror = function(e) {
 				Ti.API.info("TEXT onerror:   " + this.responseText);
 				alert('Er is iets mis met de databank.');
 			}
+			*/
 			getReq.open("GET", url);
 
 			getReq.send();

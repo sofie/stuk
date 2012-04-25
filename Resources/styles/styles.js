@@ -348,9 +348,9 @@
 				fontFamily : 'Arial',
 				fontSize : 11
 			},
-			color : '#464646'
+			color : '#464646',
+			height:15
 		},
-		
 		SearchField : {
 			color : '#b3b3b3',
 			font : {
@@ -375,7 +375,7 @@
 			height : 40,
 			top : 60
 		},
-		textNoList:{
+		textError:{
 			left : 30,
 			height : 40,
 			top : 45,

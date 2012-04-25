@@ -11,14 +11,12 @@ CustomTabBar = function(settings) {
 	
 	var resetTabs = function() {
 		for(var i = 0; i < tabBarItems.length; i++) {
-			// Clear all the images to make sure only one is shown as selected
 			tabBarItems[i].image = settings.imagePath+"clear.png";
 		}
 	};
 	
 	var assignClick = function(tabItem) {
 		tabItem.addEventListener('click', function(e) {
-			// Just fetching the 'i' variable from the loop
 			var pos = e.source.pos;
 
 			if (tabCurrent == pos) {
@@ -48,16 +46,13 @@ CustomTabBar = function(settings) {
 	
 	
 	for(var i = 0; i < settings.items.length; i++) {
-		// Go through each item and create an imageView
 		tabBarItems[i] = Titanium.UI.createImageView({
-			// background is the default image
 			backgroundImage: settings.imagePath + settings.items[i].image,
 			
-			// image is the selected image
 			image: settings.imagePath + settings.items[i].selected,
-			width: settings.width,
+			width: settings.items[i].width,
 			height: settings.height,
-			left: settings.width * i
+			left: settings.items[0].width * i
 		});
 
 		// Pass the item number (used later for changing tabs)

@@ -8,7 +8,8 @@ Ti.include(
 	
 	'/windows/concerten.js', 
 	'/windows/nieuws.js', 
-	'/windows/locatie.js' 
+	'/windows/locatie.js',
+	'/windows/info.js'
 );
 
 (function() {
@@ -58,6 +59,20 @@ Ti.include(
 			tabBarHidden : true
 		});
 		baseWinTab3.add(navTab3);
+		
+		// VIERDE TAB
+		var mainWinTab4 = Stuk.ui.createInfoWindow();
+
+		var navTab4 = Titanium.UI.iPhone.createNavigationGroup({
+			window : mainWinTab4
+		});
+		Titanium.App.navTab4 = navTab4;
+
+		var baseWinTab4 = Titanium.UI.createWindow({
+			navBarHidden : true,
+			tabBarHidden : true
+		});
+		baseWinTab4.add(navTab4);
 
 		//TAB GROUP
 		var tab1 = Titanium.UI.createTab({
@@ -70,10 +85,14 @@ Ti.include(
 		var tab3 = Titanium.UI.createTab({
 			window : baseWinTab3
 		});
+		var tab4 = Titanium.UI.createTab({
+			window : baseWinTab4
+		});
 
 		tabGroup.addTab(tab1);
 		tabGroup.addTab(tab2);
 		tabGroup.addTab(tab3);
+		tabGroup.addTab(tab4);
 
 		tabGroup.open();
 
@@ -86,16 +105,23 @@ Ti.include(
 			tabBar : tabGroup,
 			imagePath : '/img/customTabBar/',
 			height : 40,
-			width:107,
+			//width:94,
 			items : [{
 				image : Stuk.customTab1,
-				selected : Stuk.customTab1_selected
+				selected : Stuk.customTab1_selected,
+				width:95
 			}, {
 				image : Stuk.customTab2,
-				selected : Stuk.customTab2_selected
+				selected : Stuk.customTab2_selected,
+				width:95
 			}, {
 				image : Stuk.customTab3,
-				selected : Stuk.customTab3_selected
+				selected : Stuk.customTab3_selected,
+				width:95
+			}, {
+				image : Stuk.customTab4,
+				selected : Stuk.customTab4_selected,
+				width:35
 			}]
 		});
 

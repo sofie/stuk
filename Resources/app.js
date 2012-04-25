@@ -12,6 +12,7 @@ var Stuk = {
 	tab1_name : 'Programma',
 	tab2_name : 'Nieuws',
 	tab3_name:'Locatie',
+	tab4_name:'Info',
 
 	//Tabgroup
 	customTab1 : 'btn_programma.png',
@@ -20,6 +21,8 @@ var Stuk = {
 	customTab2_selected : 'btn_nieuws_selected.png',
 	customTab3 : 'btn_locatie.png',
 	customTab3_selected : 'btn_locatie_selected.png',
+	customTab4 : 'btn_info.png',
+	customTab4_selected : 'btn_info_selected.png',
 	
 	basic_font:'Arial'
 };
