@@ -316,7 +316,8 @@
 			color : '#464646',
 			left:30,
 			right:30,
-			top:10
+			top:10,
+			width:260
 		},
 		textPrice : {
 			textAlign : 'left',
@@ -327,7 +328,8 @@
 			},
 			left : 30,
 			//top:-14 als ticket wel op window
-			top:20
+			top:20,
+			width:260
 		},
 		
 		textTickets:{
