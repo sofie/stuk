@@ -57,25 +57,13 @@
 					var cdbDescription = detail.event.eventdetails.eventdetail.shortdescription;
 
 					var scrollView = Titanium.UI.createScrollView(style.scrollView);
-					
-
-					//Als er geen foto is, foto weglaten
-					/*if (Ti.Platform.displayCaps.density === 'high') {
-						  Ti.API.info('Retina');
-					     var crop = '?width=640&height=350&crop=auto';
-					   
-					}else{
-						Ti.API.info('Gewoon');
-						crop ='?width=320&height=175&crop=auto';
-					};*/
-					var crop ='?width=320&height=175&crop=auto';
-					
+				
 					if(cdbImg !== undefined) {
 						if(cdbImg.file[0] !== undefined) {
-							cdbImg = cdbImg.file[0].hlink + crop;
+							cdbImg = cdbImg.file[0].hlink + '?width=320&height=175&crop=auto';
 						} else {
 							if(cdbImg.file.hlink!=='http:\/\/www.stuk.be'){
-								cdbImg = cdbImg.file.hlink + crop;
+								cdbImg = cdbImg.file.hlink + '?width=320&height=175&crop=auto';
 							}else{
 								cdbImg='img/no_img.png'
 							}
@@ -84,14 +72,15 @@
 						cdbImg = 'img/no_img.png'
 					}
 					
-					var image = Ti.UI.createView(Stuk.combine(style.Img320, {
+					var image = Ti.UI.createImageView(Stuk.combine(style.Img320, {
+						image : cdbImg,
 						backgroundImage : cdbImg,
-						defaultImage:'img/default_img.png'
+						defaultImage:'img/default_detail_img.png'
 					}));
+					
 					Ti.API.info(image.backgroundImage);
 
 					scrollView.add(image);
-
 					var viewBgTitle = Titanium.UI.createView(style.viewTitleBg);
 
 					var name = Titanium.UI.createLabel(Stuk.combine(style.titleDetail, {

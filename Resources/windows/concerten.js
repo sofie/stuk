@@ -154,9 +154,11 @@ Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
 						if(cdbImg === '') {
 							imgThumb = 'img/no_thumb.png';
 						};
-
+						
+						Ti.API.info(Titanium);
 						var image = Titanium.UI.createView(Stuk.combine(style.Img90, {
-							backgroundImage : imgThumb
+							backgroundImage : imgThumb,
+							image:imgThumb
 						}));
 						
 						var name = Ti.UI.createLabel(Stuk.combine(style.titleNaam, {
