@@ -21,7 +21,6 @@ Ti.include(
 
 		// EERSTE TAB
 		var mainWinTab1 = Stuk.ui.createConcertenWindow();
-		
 		var navTab1 = Titanium.UI.iPhone.createNavigationGroup({
 			window : mainWinTab1
 		});
@@ -105,7 +104,6 @@ Ti.include(
 			tabBar : tabGroup,
 			imagePath : '/img/customTabBar/',
 			height : 40,
-			//width:94,
 			items : [{
 				image : Stuk.customTab1,
 				selected : Stuk.customTab1_selected,

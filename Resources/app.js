@@ -7,7 +7,7 @@ var Stuk = {
 	app_name : 'STUK',
 	app_site : 'http://www.stuk.be/',
 	app_mail :'info@stuk.be',
-	app_tel: '016 320 300',
+	app_tel: '016320300',
 
 	tab1_name : 'Programma',
 	tab2_name : 'Nieuws',

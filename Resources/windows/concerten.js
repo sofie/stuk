@@ -2,7 +2,10 @@
  * Eerste tab, alle concerten in tableview
  */
 
-Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
+Ti.include(
+	'/windows/concert_detail.js', 
+	'/windows/zoeken.js'
+);
 
 (function() {
 	Stuk.ui.createConcertenWindow = function() {
@@ -145,20 +148,22 @@ Ti.include('/windows/concert_detail.js', '/windows/zoeken.js');
 
 						var row = Ti.UI.createTableViewRow(style.tableViewRow);
 						
-						if (Ti.Platform.displayCaps.density === 'high') {
+						/*if (Ti.Platform.displayCaps.density === 'high') {
 						     var imgThumb = strImg + '?width=216&height=160&crop=auto';
 						}else{
 							imgThumb = strImg + '?width=108&height=80&crop=auto';
-						};
+						};*/
+						
+						var imgThumb = strImg + '?width=108&height=80&crop=auto';
 
 						if(cdbImg === '') {
-							imgThumb = 'img/no_thumb.png';
+							imgThumb = 'img/no_thumb.png'
 						};
 						
 						Ti.API.info(Titanium);
-						var image = Titanium.UI.createView(Stuk.combine(style.Img90, {
-							backgroundImage : imgThumb,
-							image:imgThumb
+						var image = Titanium.UI.createImageView(Stuk.combine(style.Img90, {
+							image:imgThumb,
+							defaultImage:'img/default_img.png'
 						}));
 						
 						var name = Ti.UI.createLabel(Stuk.combine(style.titleNaam, {

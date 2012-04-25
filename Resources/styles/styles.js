@@ -351,7 +351,7 @@
 				fontSize : 11
 			},
 			color : '#464646',
-			height:15
+			height:40
 		},
 		SearchField : {
 			color : '#b3b3b3',

@@ -112,7 +112,7 @@
 						}
 
 						var image = Titanium.UI.createImageView(Stuk.combine(style.Img90,{
-							backgroundImage : imgThumb
+							image : imgThumb
 						}));
 
 						var name = Ti.UI.createLabel(Stuk.combine(style.titleNaam,{
