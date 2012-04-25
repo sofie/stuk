@@ -28,7 +28,9 @@
 				animated : false
 			});
 		});
-		var navActInd = Titanium.UI.createActivityIndicator();
+		var navActInd = Titanium.UI.createActivityIndicator({
+			style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK
+		});
 
 		detailWin.addEventListener('open', function(e) {
 			detailWin.setRightNavButton(navActInd);
