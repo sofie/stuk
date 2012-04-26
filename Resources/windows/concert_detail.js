@@ -194,7 +194,10 @@
 					}));
 					mail.addEventListener('click', function() {
 						Ti.API.info(Stuk.app_mail);
-						Titanium.Platform.openURL('mail:' + Stuk.app_mail)
+						//Titanium.Platform.openURL('mailto:' + Stuk.app_mail);
+						var emailDialog = Ti.UI.createEmailDialog();
+			            emailDialog.toRecipients = [Stuk.app_mail];
+			            emailDialog.open();
 					});
 					footer.add(organiser);
 					footer.add(tel);

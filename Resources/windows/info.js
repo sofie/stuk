@@ -76,12 +76,12 @@
 		}));
 
 		var organiser = Titanium.UI.createLabel(Stuk.combine(style.textFooter, {
-			text : Stuk.app_name,
+			text : '© '+Stuk.app_name,
 			left : 15
 		}));
 
 		var tel = Titanium.UI.createLabel(Stuk.combine(style.textFooter, {
-			text : Stuk.app_tel,
+			text : 'T: '+Stuk.app_tel,
 			left : 95
 		}));
 
@@ -94,8 +94,12 @@
 			left : 190
 		}));
 		mail.addEventListener('click', function() {
-			Titanium.Platform.openURL('mail:' + Stuk.app_mail)
+			//Titanium.Platform.openURL('mailto:' + Stuk.app_mail);
+			var emailDialog = Ti.UI.createEmailDialog();
+            emailDialog.toRecipients = [Stuk.app_mail];
+            emailDialog.open();
 		});
+		
 		footer.add(organiser);
 		footer.add(tel);
 		footer.add(mail);

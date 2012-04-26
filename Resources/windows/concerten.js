@@ -159,8 +159,7 @@ Ti.include(
 						if(cdbImg === '') {
 							imgThumb = 'img/no_thumb.png'
 						};
-						
-						Ti.API.info(Titanium);
+					
 						var image = Titanium.UI.createImageView(Stuk.combine(style.Img90, {
 							image:imgThumb,
 							defaultImage:'img/default_img.png'
