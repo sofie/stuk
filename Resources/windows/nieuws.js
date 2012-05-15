@@ -9,13 +9,15 @@ Ti.include('/windows/nieuws_detail.js');
 
 		Titanium.App.tabgroup.setActiveTab(Titanium.App.navTab2);
 		var nieuwsWindow = Titanium.UI.createWindow(Stuk.combine(style.Window, {
-			barImage : 'img/header.png'
+			barImage : 'img/header.png',
+			title: Stuk.tab2_name
 		}));
-
-		var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
-			text : Stuk.tab2_name
-		}));
-		nieuwsWindow.setTitleControl(lblTitle);
+		if(Ti.Platform.osname!=='android'){
+			var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
+				text : Stuk.tab2_name
+			}));
+			nieuwsWindow.setTitleControl(lblTitle);
+		}
 
 		// load the feed
 		nieuwsWindow.addEventListener('open', function(e) {
@@ -64,13 +66,19 @@ Ti.include('/windows/nieuws_detail.js');
 				title = title.replace(/\n/gi, " ");
 				title = title.replace(/<br \/>/gi, "");
 				title = title.replace(/&eacute;/gi, "é");
+				title = title.replace(/&Aring;/gi, "Ä");
+				title = title.replace(/&aring;/gi, "ä");
+				title = title.replace(/&ouml;/gi, "ö");
 				title = title.replace(/&amp;/gi, "&");
 				title = title.replace(/&egrave;/gi, "è");
 				title = title.replace(/&euml;/gi, "ë");
 				desc = desc.replace(/\n/gi, " ");
 				desc = desc.replace(/<br \/>/gi, "");
 				desc = desc.replace(/&amp;/gi, "&");
+				desc = desc.replace(/&Aring;/gi, "Ä");
+				desc = desc.replace(/&aring;/gi, "ä");
 				desc = desc.replace(/&eacute;/gi, "é");
+				desc = desc.replace(/&ouml;/gi, "ö");
 				desc = desc.replace(/&egrave;/gi, "è");
 				desc = desc.replace(/&euml;/gi, "ë");
 
@@ -91,11 +99,25 @@ Ti.include('/windows/nieuws_detail.js');
 					text : date
 				}));
 				row.add(post_date);
+				
+				var viewBlue;
+				if(Ti.Platform.osname!=='android'){
+					viewBlue = Titanium.UI.createView(Stuk.combine(style.viewBlue,{
+						top:-19
+					}));
+				}else{
+					viewBlue = Titanium.UI.createView(Stuk.combine(style.viewBlue,{
+						top:-7
+					}));
+				}
+				
 
 				// Add some rowData for when it is clicked
 				row.thisTitle = title;
 				row.thisLink = link;
 				row.thisDesc = desc;
+				row.add(viewBlue);
+				
 
 				// Add the row to the data
 				data[i] = row;
@@ -104,17 +126,32 @@ Ti.include('/windows/nieuws_detail.js');
 			};
 
 			// create the table
-			var feedTableView = Titanium.UI.createTableView(Stuk.combine(style.TableView, {
-				data : data
-			}));
+			var feedTableView;
+			if(Ti.Platform.osname!=='android'){
+				feedTableView = Titanium.UI.createTableView(Stuk.combine(style.TableView, {
+					data : data
+				}));
+			}else{
+				feedTableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewAndroid, {
+					data : data
+				}));
+			}
 			nieuwsWindow.add(feedTableView);
 
 			//WEBVIEW OPENEN VAN NIEUWSITEM
 			feedTableView.addEventListener('click', function(e) {
-				Titanium.App.selectedItemNieuws = e.rowData.thisLink;
-				Titanium.App.navTab2.open(Stuk.ui.createNieuwsDetailWindow(), {
-					animated : false
-				});
+				//Titanium.App.selectedItemNieuws = e.rowData.thisLink;
+				if (Ti.Platform.osname === 'android') {
+					Titanium.App.selectedItemNieuws = e.rowData.thisLink;
+					Titanium.App.selectedItemNieuws = "http://m.demorgen.be/dm-muziek.html";
+					//Ti.API.info(Titanium.App.selectedItemNieuws);
+					nieuwsWindow.containingTab.open(Stuk.ui.createNieuwsDetailWindow());		
+				}else{
+					Titanium.App.selectedItemNieuws = e.rowData.thisLink;
+					Titanium.App.navTab2.open(Stuk.ui.createNieuwsDetailWindow(), {
+						animated : false
+					});
+				}
 
 			});
 		};

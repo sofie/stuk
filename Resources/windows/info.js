@@ -6,14 +6,18 @@
 	Stuk.ui.createInfoWindow = function() {
 
 		Titanium.App.tabgroup.setActiveTab(Titanium.App.navTab4);
+		
 		var infoWindow = Titanium.UI.createWindow(Stuk.combine(style.DetailWindow, {
-			barImage : 'img/header.png'
+			barImage : 'img/header.png',
+			title:Stuk.tab4_name
 		}));
-
-		var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
-			text : Stuk.tab4_name
-		}));
-		infoWindow.setTitleControl(lblTitle);
+		
+		if(Ti.Platform.osname!=='android'){
+			var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
+				text : Stuk.tab4_name
+			}));
+			infoWindow.setTitleControl(lblTitle);
+		}
 		
 		var scrollView = Titanium.UI.createScrollView(style.scrollView);
 
@@ -44,26 +48,6 @@
 		var lblCafeDescription = Titanium.UI.createLabel(Stuk.combine(style.textLocationDescription, {
 			text : 'ma-vr : 11u00 - 2u00 \nza & zo : 14u00 - 2u00 \nOp feestdagen zijn we geopend vanaf 19u30, tenzij anders aangegeven.',
 			height:100
-		}));
-		scrollView.add(lblCafeDescription);
-		
-		//
-		//Zaalverhuur
-		//
-		var viewBgZaalverhuur = Titanium.UI.createView(style.viewTitleBg);
-		scrollView.add(viewBgZaalverhuur);
-		var zaalverhuur = Titanium.UI.createLabel(Stuk.combine(style.titleDetail, {
-			text : 'zaalverhuur'
-		}));
-		scrollView.add(zaalverhuur);
-		
-		var lblPaviljoenen = Titanium.UI.createLabel(Stuk.combine(style.textLocation, {
-			text : 'Paviljoenen'
-		}));
-		scrollView.add(lblPaviljoenen);
-		var lblCafeDescription = Titanium.UI.createLabel(Stuk.combine(style.textLocationDescription, {
-			text : 'STUK beschikt over 4 geluiddichte paviljoenen voor muzikanten. In paviljoen 5 staat er een piano. Deze paviljoenen worden gratis verhuurd op voorwaarde dat je een STUKkaart (€12) hebt. In de paviljoenen geldt, net zoals in het volledige STUKgebouw, een strikt rookverbod.\ncontact : ticket@stuk.be - 016 320 320',
-			height:140
 		}));
 		scrollView.add(lblCafeDescription);
 		

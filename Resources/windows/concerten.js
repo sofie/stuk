@@ -15,11 +15,12 @@ Ti.include(
 		var mainWin = Titanium.UI.createWindow(Stuk.combine(style.Window, {
 			barImage : 'img/header.png'
 		}));
-
-		var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
-			text : Stuk.tab1_name
-		}));
-		mainWin.setTitleControl(lblTitle);
+		if(Ti.Platform.osname!=='android'){
+			var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
+				text : Stuk.tab1_name
+			}));
+			mainWin.setTitleControl(lblTitle);
+		}
 
 
 		// LEFT NAVBAR: REFRESH BUTTON
@@ -74,7 +75,7 @@ Ti.include(
 					fontWeight : 'bold',
 					fontSize : 11
 				},
-				backgroundImage : "img/btn_vandaag.png",
+				backgroundImage : "/img/btn_vandaag.png",
 				width : 73,
 				height : 35,
 				left : 15
@@ -92,7 +93,7 @@ Ti.include(
 					fontWeight : 'bold',
 					fontSize : 11
 				},
-				backgroundImage : "img/btn_deze_week.png",
+				backgroundImage : "/img/btn_deze_week.png",
 				width : 73,
 				height : 35,
 				left : 120
@@ -110,8 +111,8 @@ Ti.include(
 					fontWeight : 'bold',
 					fontSize : 11
 				},
-				backgroundImage : "img/btn_deze_maand.png",
-				width : 73,
+				backgroundImage : "/img/btn_deze_maand.png",
+				width : 80,
 				height : 35,
 				right : 15
 			});
@@ -148,22 +149,18 @@ Ti.include(
 
 						var row = Ti.UI.createTableViewRow(style.tableViewRow);
 						
-						/*if (Ti.Platform.displayCaps.density === 'high') {
-						     var imgThumb = strImg + '?width=216&height=160&crop=auto';
-						}else{
-							imgThumb = strImg + '?width=108&height=80&crop=auto';
-						};*/
 						
 						var imgThumb = strImg + '?width=108&height=80&crop=auto';
 
 						if(cdbImg === '') {
-							imgThumb = 'img/no_thumb.png'
+							imgThumb = '/img/no_thumb.png'
 						};
 					
 						var image = Titanium.UI.createImageView(Stuk.combine(style.Img90, {
 							image:imgThumb,
-							defaultImage:'img/default_img.png'
+							//defaultImage:'img/default_img.png'
 						}));
+						image.defaultImage="/img/default_img.png";
 						
 						var name = Ti.UI.createLabel(Stuk.combine(style.titleNaam, {
 							text : cdbNaam
@@ -190,10 +187,17 @@ Ti.include(
 
 						data.push(row);
 					};
-
-					var tableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewConcerten, {
-						data : data
-					}));
+					var tableView;
+					if(Ti.Platform.osname!=='android'){
+						tableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewConcerten, {
+							data : data
+						}));
+					}else{
+						var tableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewConcertenAndroid, {
+							data : data
+						}));
+					}
+					
 					mainWin.add(tableView);
 
 					//Open detail window
@@ -202,9 +206,16 @@ Ti.include(
 						Titanium.API.info(Titanium.App.selectedIndex);
 						Titanium.App.rowIndex = e.index;
 						
-						Titanium.App.navTab1.open( Stuk.ui.createConcertDetailWindow(), {
-							animated : false
-						});
+						if (Ti.Platform.osname === 'android') {
+							mainWin.containingTab.open(Stuk.ui.createConcertDetailWindow());
+							
+						}else{
+							Titanium.App.navTab1.open( Stuk.ui.createConcertDetailWindow(), {
+								animated : false
+							});
+						}
+						
+						
 					});
 
 					Stuk.ui.activityIndicator.hideModal();

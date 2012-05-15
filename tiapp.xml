@@ -10,11 +10,11 @@
         <target device="mobileweb">false</target>
         <target device="iphone">true</target>
         <target device="ipad">false</target>
-        <target device="android">false</target>
+        <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
     <sdk-version>2.0.1.GA2</sdk-version>
-    <id>com.stuk</id>
+    <id>com.Stuk</id>
     <name>Stuk</name>
     <version>1.0</version>
     <publisher>sofie</publisher>
@@ -42,7 +42,24 @@
             <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <supports-screens android:anyDensity="false"/>
+        </manifest>
+        <application>
+        	<activity android:configChanges="keyboardHidden|orientation" android:label="STUK" android:name=".STUKActivity" android:alwaysRetainTaskState="true" android:theme="@style/Theme.Titanium">
+			  <intent-filter>
+			    <action android:name="android.intent.action.MAIN"/>
+			    <category android:name="android.intent.category.LAUNCHER"/>
+			  </intent-filter>
+			</activity>
+        </application>
+        <icon>appicon.png</icon>
+    </android>
+    
+	
+	
     <mobileweb>
         <precache/>
         <splash>

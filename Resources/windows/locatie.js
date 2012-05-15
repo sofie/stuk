@@ -7,15 +7,22 @@
 
 		Titanium.App.tabgroup.setActiveTab(Titanium.App.navTab3);
 		var locatieWindow = Titanium.UI.createWindow(Stuk.combine(style.DetailWindow, {
-			barImage : 'img/header.png'
+			barImage : 'img/header.png',
+			title:Stuk.tab3_name
 		}));
-
-		var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
-			text : Stuk.tab3_name
-		}));
-		locatieWindow.setTitleControl(lblTitle);
 		
-		var scrollView = Titanium.UI.createScrollView(style.scrollView);
+		if(Ti.Platform.osname!=='android'){
+			var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
+				text : Stuk.tab3_name
+			}));
+			locatieWindow.setTitleControl(lblTitle);
+		}
+		var scrollView;
+		if(Ti.Platform.osname!=='android'){
+			scrollView = Titanium.UI.createScrollView(style.scrollView);
+		}else{
+			scrollView = Titanium.UI.createScrollView(style.scrollViewAndroid);
+		}
 
 		var lblLocation = Titanium.UI.createLabel(Stuk.combine(style.textLocationTitle, {
 			text : 'STUK KUNSTENCENTRUM vzw . Naamsestraat 96 . B-3000 Leuven'
@@ -28,7 +35,7 @@
 			title : "STUK Kunstencentrum",
 			subtitle : 'Naamsestraat 96 . B-3000 Leuven',
 			animate : true,
-			image : 'img/pin.png'
+			image : '/img/pin.png'
 		});
 
 		var mapview = Titanium.Map.createView({

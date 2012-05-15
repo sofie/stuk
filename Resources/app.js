@@ -1,4 +1,5 @@
 var Stuk = {
+	navGroup: undefined,
 	ui : {},
 	api_key : '147c56bc-ae80-4b2f-b246-b83e55f364fc',
 	organizer : '269AFC18-AEF7-603E-F134EC26BBAA13BE',

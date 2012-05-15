@@ -16,7 +16,8 @@
 		Window : {
 			width : '100%',
 			backgroundColor : '#fff',
-			tabBarHidden : true
+			tabBarHidden : true,
+			barColor:'black'
 		},
 		DetailWindow : {
 			width : '100%',
@@ -35,6 +36,16 @@
 			bottom : 40,
 			verticalBounce:true
 		},
+		scrollViewAndroid : {
+			contentWidth : 'auto',
+			contentHeight : 'auto',
+			showVerticalScrollIndicator : true,
+			layout : 'vertical',
+			top : 0,
+			bottom : 0,
+			verticalBounce:true
+		},
+		
 
 		//
 		// BUTTONS
@@ -92,6 +103,12 @@
 			left : 0,
 			right : 0,
 			bottom : 40,
+		},
+		TableViewAndroid : {
+			top : 0,
+			left : 0,
+			right : 0,
+			bottom :0,
 			backgroundColor : '#fff'
 		},
 		TableViewConcerten : {
@@ -99,6 +116,13 @@
 			left : 0,
 			right : 0,
 			bottom : 40,
+			backgroundColor : '#fff'
+		},
+		TableViewConcertenAndroid : {
+			top : 35,
+			left : 0,
+			right : 0,
+			bottom : 0,
 			backgroundColor : '#fff'
 		},
 		TableViewSearch : {
@@ -115,10 +139,11 @@
 			selectedBackgroundColor : '#B8DAE8',
 			backgroundSelectedColor : '#B8DAE8',
 			height : 100,
-			bottom:65
+			bottom:65,
 		},
 		tableViewRowNieuws : {
 			rightImage : 'img/arrow.png',
+			backgroundImage : 'img/bg_row.jpg',
 			backgroundColor : '#fff',
 			selectedBackgroundColor : '#B8DAE8',
 			backgroundSelectedColor : '#B8DAE8',
@@ -171,6 +196,12 @@
 			top :0,
 			bottom : 40
 		},
+		webViewFeedAndroid : {
+			width : 440,
+			left : 0,
+			top :0,
+			bottom : 0
+		},
 		
 		//
 		// LABELS
@@ -189,7 +220,7 @@
 			left : 115,
 			top : 3,
 			width : 190,
-			height : 15,
+			height : 20,
 			textAlign : 'left',
 			color : '#464646',
 			font : {
@@ -208,7 +239,7 @@
 			top:20,
 			left:30,
 			width:260,
-			height:30
+			height:32
 		},
 		textLocation:{
 			color : '#2F6885',
@@ -223,7 +254,7 @@
 		},
 		textPerformers : {
 			left : 115,
-			top : 20,
+			top : 22,
 			width : 190,
 			height : 15,
 			textAlign : 'left',
@@ -235,7 +266,7 @@
 			}
 		},
 		textDescription : {
-			bottom : 48,
+			bottom : 40,
 			left : 115,
 			width : 190,
 			height : 14,
@@ -260,8 +291,8 @@
 		textHeading : {
 			left : 115,
 			right:10,
-			bottom : 32,
-			height : 14,
+			bottom : 24,
+			height : 17,
 			textAlign : 'left',
 			color : '#2F6885',
 			font : {
@@ -291,7 +322,7 @@
 				fontWeight : 'bold',
 				fontSize : 13
 			},
-			height : 15,
+			height : 17,
 			left : 30,
 			top:0
 		},
@@ -388,10 +419,17 @@
 				fontSize : 13
 			}
 		},
+		viewBlue : {
+			width:250,
+			height:10,
+			backgroundColor: '#dee7cd',
+			bottom:0,
+			left:0
+		},
 
 		//TAB2
 		titleFeeds : {
-			height : 50,
+			height : 'auto',
 			width : 270,
 			left : 20,
 			top : 5,
@@ -404,9 +442,9 @@
 		textFeed : {
 			color : '#000',
 			textAlign : 'left',
-			top : 5,
+			top : 0,
 			left : 20,
-			height : 50,
+			height : 43,
 			width : 270,
 			font : {
 				fontFamily : 'Arial',
@@ -422,9 +460,9 @@
 				fontWeight : 'bold'
 			},
 			width : 270,
-			top : 5,
+			top : 0,
 			left : 20,
-			bottom : 8
+			bottom : 10
 		},
 
 		//

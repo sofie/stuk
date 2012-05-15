@@ -6,37 +6,31 @@
 	Stuk.ui.createConcertDetailWindow = function() {
 
 		var detailWin = Titanium.UI.createWindow(Stuk.combine(style.DetailWindow, {
-			barImage : 'img/header_detail.png'
+			barImage : '/img/header_detail.png'
 		}));
-		detailWin.addEventListener('open',function(){
-			Ti.API.info('Detail win open');
-		});
-		detailWin.addEventListener('close',function(){
-			Ti.API.info('Detail win close');
-		});
-		detailWin.addEventListener('blur',function(){
-			Ti.API.info('Detail win blur');
-		});
 
 		// LEFT NAVBAR BACK BUTTON
-		var backButton = Ti.UI.createButton(style.backButton);
-		backButton.addEventListener('click', function() {
-			Ti.App.fireEvent('app:reloadSearch', {
-				action : 'Reload search'
+		if(Ti.Platform.osname!=='android'){
+			var backButton = Ti.UI.createButton(style.backButton);
+			backButton.addEventListener('click', function() {
+				Ti.App.fireEvent('app:reloadSearch', {
+					action : 'Reload search'
+				});
+				
+				Titanium.App.navTab1.close(detailWin, {
+					animated : false
+				});
+				
 			});
-			
-			Titanium.App.navTab1.close(detailWin, {
-				animated : false
+			detailWin.leftNavButton = backButton;
+		}
+		if(Ti.Platform.osname!=='android'){
+			detailWin.addEventListener('blur', function(e) {
+				Titanium.App.navTab1.close(detailWin, {
+					animated : false
+				});
 			});
-			
-		});
-		detailWin.leftNavButton = backButton;
-
-		detailWin.addEventListener('blur', function(e) {
-			Titanium.App.navTab1.close(detailWin, {
-				animated : false
-			});
-		});
+		}
 		var navActInd = Titanium.UI.createActivityIndicator({
 			style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK
 		});
@@ -44,7 +38,9 @@
 		detailWin.addEventListener('open', function(e) {
 			getData();
 
-			detailWin.setRightNavButton(navActInd);
+			if(Ti.Platform.osname!=='android'){
+				detailWin.setRightNavButton(navActInd);
+			}
 			navActInd.show();
 		});
 		
@@ -65,7 +61,7 @@
 					var cdbPrijs = detail.event.eventdetails.eventdetail.price;
 					var cdbDescription = detail.event.eventdetails.eventdetail.shortdescription;
 
-					var scrollView = Titanium.UI.createScrollView(style.scrollView);
+					var scrollView = Titanium.UI.createScrollView(style.scrollViewAndroid);
 				
 					if(cdbImg !== undefined) {
 						if(cdbImg.file[0] !== undefined) {
@@ -74,17 +70,17 @@
 							if(cdbImg.file.hlink!=='http:\/\/www.stuk.be'){
 								cdbImg = cdbImg.file.hlink + '?width=320&height=175&crop=auto';
 							}else{
-								cdbImg='img/no_img.png'
+								cdbImg='/img/no_img.png'
 							}
 						}
 					} else {
-						cdbImg = 'img/no_img.png'
+						cdbImg = '/img/no_img.png'
 					}
 					
 					var image = Ti.UI.createImageView(Stuk.combine(style.Img320, {
 						image : cdbImg,
 						//backgroundImage : cdbImg,
-						defaultImage:'img/default_detail_img.png'
+						defaultImage:'/img/default_detail_img.png'
 					}));
 
 					scrollView.add(image);
