@@ -13,8 +13,12 @@ Ti.include(
 		Titanium.App.tabgroup.setActiveTab(Titanium.App.navTab1);
 
 		var mainWin = Titanium.UI.createWindow(Stuk.combine(style.Window, {
-			barImage : 'img/header.png'
+			barImage : '/img/header.png',
+			modal:false,
+			fullscreen:true
 		}));
+		
+		
 		if(Ti.Platform.osname!=='android'){
 			var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
 				text : Stuk.tab1_name
@@ -31,6 +35,30 @@ Ti.include(
 			getData();
 		});
 		mainWin.leftNavButton = refreshButton;
+		
+		if(Ti.Platform.osname==='android'){
+			
+			mainWin.activity.onCreateOptionsMenu = function(e) {
+		          var menu = e.menu;
+				  var menuItem1 = menu.add({ title: "Refresh" });
+				  menuItem1.setIcon("/img/btn_refresh.png");
+				  menuItem1.addEventListener("click", function(e) {
+				  	var navActInd = Titanium.UI.createActivityIndicator({
+						style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,
+						 message:' Loading...'
+					});
+					navActInd.show();
+					url = 'http://build.uitdatabank.be/api/events/search?format=json&key=' + Stuk.api_key + '&organiser=' + Stuk.organizer;
+					getData();
+					navActInd.hide();
+				  });
+				 /* var menuItem2 = menu.add({ title: "Search" });
+				  menuItem2.setIcon("/img/btn_zoek.png");
+				  menuItem2.addEventListener("click", function(e) {
+				 	 mainWin.containingTab.open(Stuk.ui.createSearchWindow());	
+				  });*/
+	    	};
+	    }
 
 
 		if(!Titanium.Network.online) {
@@ -55,6 +83,9 @@ Ti.include(
 					animated : false
 				});
 			});
+			
+			
+			
 			
 			//
 			//Filter op resultaten

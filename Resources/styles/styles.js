@@ -133,8 +133,17 @@
 			backgroundColor : '#fff',
 			scrollable : true
 		},
+		TableViewSearchAndroid : {
+			top : 44,
+			left : 0,
+			right : 0,
+			bottom : 347,
+			backgroundColor : '#fff',
+			scrollable : true
+		},
+		
 		tableViewRow : {
-			rightImage : 'img/arrow.png',
+			rightImage : '/img/arrow.png',
 			backgroundColor : '#fff',
 			selectedBackgroundColor : '#B8DAE8',
 			backgroundSelectedColor : '#B8DAE8',
@@ -142,8 +151,8 @@
 			bottom:65,
 		},
 		tableViewRowNieuws : {
-			rightImage : 'img/arrow.png',
-			backgroundImage : 'img/bg_row.jpg',
+			rightImage : '/img/arrow.png',
+			backgroundImage : '/img/bg_row.jpg',
 			backgroundColor : '#fff',
 			selectedBackgroundColor : '#B8DAE8',
 			backgroundSelectedColor : '#B8DAE8',
@@ -387,7 +396,7 @@
 		SearchField : {
 			color : '#b3b3b3',
 			font : {
-				fontFamily : 'Tahoma',
+				fontFamily : 'Arial',
 				fontSize : 13
 			},
 			returnKeyType : Titanium.UI.RETURNKEY_SEARCH,
@@ -395,6 +404,18 @@
 			height : 30,
 			top : 7,
 			left : 40,
+		},
+		SearchFieldAndroid : {
+			color : '#b3b3b3',
+			font : {
+				fontFamily : 'Arial',
+				fontSize : 16
+			},
+			returnKeyType : Titanium.UI.RETURNKEY_SEARCH,
+			width :  280,
+			height : 40,
+			top : 5,
+			left : 20,
 		},
 
 		textInstruction : {

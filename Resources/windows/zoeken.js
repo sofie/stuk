@@ -9,20 +9,35 @@
 		}));
 
 		//LEFT NAVBAR BACK BUTTON
-		var backButton = Titanium.UI.createButton(style.backButton);
-		backButton.addEventListener('click', function() {
-			Titanium.App.navTab1.close(searchWin, {
-				animated : false
+		if(Ti.Platform.osname!=='android'){
+			var backButton = Titanium.UI.createButton(style.backButton);
+			backButton.addEventListener('click', function() {
+				Titanium.App.navTab1.close(searchWin, {
+					animated : false
+				});
 			});
-		});
-		searchWin.leftNavButton = backButton;
+			searchWin.leftNavButton = backButton;
+		}else{
+			searchWin.addEventListener('android:back', function(e) {
+			    searchWin.close();
+			 });
+		}
+		
 
 		var searchBg = Titanium.UI.createView(style.searchBar);
 		searchWin.add(searchBg);
 
-		var searchBar = Titanium.UI.createTextField(Stuk.combine(style.SearchField,{
-			hintText : 'Zoek op naam...'
-		}));
+		var searchBar
+		if(Ti.Platform.osname==='android'){
+			searchBar = Titanium.UI.createTextField(Stuk.combine(style.SearchFieldAndroid,{
+				hintText : 'Zoek op naam...'
+			}));
+		}else{
+			searchBar = Titanium.UI.createTextField(Stuk.combine(style.SearchField,{
+				hintText : 'Zoek op naam...'
+			}));
+		}
+		
 		searchWin.add(searchBar);
 
 		searchBar.addEventListener('change', function() {
@@ -140,9 +155,16 @@
 
 						data.push(row);
 					};
-					var tableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewSearch,{
-						data : data
-					}));
+					var tableView;
+					if(Ti.Platform.osname==='android'){
+						tableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewSearchAndroid,{
+							data : data
+						}));
+					}else{
+						tableView = Titanium.UI.createTableView(Stuk.combine(style.TableViewSearch,{
+							data : data
+						}));
+					}
 					searchWin.add(tableView);
 					
 					searchBar.addEventListener('return', function(e) {
@@ -155,12 +177,23 @@
 
 						Titanium.App.selectedIndex = list[e.index].cdbid;
 						Titanium.API.info(Titanium.App.selectedIndex);
+						
+						if (Ti.Platform.osname === 'android') {
+							searchWin.containingTab.open(Stuk.ui.createConcertDetailWindow());
+							
+						}else{
+							Titanium.App.navTab1.open( Stuk.ui.createConcertDetailWindow(), {
+								animated : false
+							});
+						}
 
 						Titanium.App.navTab1.open(Stuk.ui.createConcertDetailWindow(),{
 							animated:false
 						});
 
 					});
+					
+					
 				} catch(e) {
 					alert(e);
 				}

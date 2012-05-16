@@ -47,14 +47,7 @@
         <manifest>
             <supports-screens android:anyDensity="false"/>
         </manifest>
-        <application>
-        	<activity android:configChanges="keyboardHidden|orientation" android:label="STUK" android:name=".STUKActivity" android:alwaysRetainTaskState="true" android:theme="@style/Theme.Titanium">
-			  <intent-filter>
-			    <action android:name="android.intent.action.MAIN"/>
-			    <category android:name="android.intent.category.LAUNCHER"/>
-			  </intent-filter>
-			</activity>
-        </application>
+        
         <icon>appicon.png</icon>
     </android>
     

@@ -7,7 +7,7 @@
 
 		Titanium.App.tabgroup.setActiveTab(Titanium.App.navTab3);
 		var locatieWindow = Titanium.UI.createWindow(Stuk.combine(style.DetailWindow, {
-			barImage : 'img/header.png',
+			barImage : '/img/header.png',
 			title:Stuk.tab3_name
 		}));
 		
