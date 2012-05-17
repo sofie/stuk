@@ -8,6 +8,9 @@
 		var detailWin = Titanium.UI.createWindow(Stuk.combine(style.DetailWindow, {
 			barImage : '/img/header_detail.png'
 		}));
+		if(Ti.Platform.osname === 'android') {
+			detailWin.title = 'Programma';
+		}
 
 		// LEFT NAVBAR BACK BUTTON
 		if(Ti.Platform.osname!=='android'){
@@ -31,16 +34,22 @@
 				});
 			});
 		}
-		var navActInd = Titanium.UI.createActivityIndicator({
-			style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK
-		});
+		if(Ti.Platform.osname === 'android') {
+			var navActInd = Titanium.UI.createActivityIndicator({
+				message : ' Loading...'
+			});
+			detailWin.add(navActInd);
+			
+		} else {
+			var navActInd = Titanium.UI.createActivityIndicator({
+				style : Ti.UI.iPhone.ActivityIndicatorStyle.DARK
+			});
+			detailWin.setRightNavButton(navActInd);
+		}
+
 
 		detailWin.addEventListener('open', function(e) {
 			getData();
-
-			if(Ti.Platform.osname!=='android'){
-				detailWin.setRightNavButton(navActInd);
-			}
 			navActInd.show();
 		});
 		

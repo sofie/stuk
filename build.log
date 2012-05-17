@@ -5,87 +5,13 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.014141 seconds on emulator to get ready
+[DEBUG] waited 0.013747 seconds on emulator to get ready
 [DEBUG] com.Stuk installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/android/appicon.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/appicon.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/android/default.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/default.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/app.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/app.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/config/activityIndicator.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/config/activityIndicator.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/config/config.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/config/config.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/config/customTabBar.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/config/customTabBar.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/config/strip_tags.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/config/strip_tags.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/arrow.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/arrow.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/arrow@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/arrow@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/arrow_wit.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/arrow_wit.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/bg.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/bg.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/bg_row.jpg => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/bg_row.jpg
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/bg_row@2x.jpg => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/bg_row@2x.jpg
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/bg_search.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/bg_search.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/bg_search@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/bg_search@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_back.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_back.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_back@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_back@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_deze_maand.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_deze_maand.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_deze_maand@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_deze_maand@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_deze_week.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_deze_week.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_deze_week@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_deze_week@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_refresh.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_refresh.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_refresh@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_refresh@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_vandaag.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_vandaag.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_vandaag@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_vandaag@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_volgende_maand.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_volgende_maand.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_zoek.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_zoek.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/btn_zoek@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/btn_zoek@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_info.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_info.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_info@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_info@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_info_selected.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_info_selected.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_info_selected@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_info_selected@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_locatie.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_locatie.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_locatie@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_locatie@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_locatie_selected.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_locatie_selected.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_locatie_selected@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_locatie_selected@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_nieuws.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_nieuws.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_nieuws@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_nieuws@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_nieuws_selected.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_nieuws_selected.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_nieuws_selected@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_nieuws_selected@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_programma.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_programma.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_programma@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_programma@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_programma_selected.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_programma_selected.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/btn_programma_selected@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/btn_programma_selected@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/customTabBar/clear.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/customTabBar/clear.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/default_detail_img.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/default_detail_img.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/default_detail_img@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/default_detail_img@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/default_img.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/default_img.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/default_img@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/default_img@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_detail.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_detail.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_detail@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_detail@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_nieuws.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_nieuws.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_nieuws@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_nieuws@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_tickets.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_tickets.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_tickets@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_tickets@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_zoeken.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_zoeken.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/header_zoeken@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/header_zoeken@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/no_img.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/no_img.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/no_img@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/no_img@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/no_thumb.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/no_thumb.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/no_thumb@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/no_thumb@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/pin.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/pin.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/img/pin@2x.png => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/img/pin@2x.png
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/styles/styles.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/styles/styles.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/concert_detail.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/concert_detail.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/concerten.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/concerten.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/info.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/info.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/locatie.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/locatie.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/main.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/main.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/nieuws.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/nieuws.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/nieuws_detail.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/nieuws_detail.js
-[TRACE] COPYING CREATED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/zoeken.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/zoeken.js
+[TRACE] COPYING MODIFIED FILE: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/windows/concerten.js => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/windows/concerten.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
-[DEBUG] app stylesheet => /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/ApplicationStylesheet.java
 [DEBUG] copying app icon: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/appicon.png
 [DEBUG] generating theme.xml
 [DEBUG] found drawable-long-port-hdpi splash screen at /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/android/images/res-long-port-hdpi/default.png
@@ -100,12 +26,11 @@ Logfile initialized
 [DEBUG] copying /Users/sofie/Documents/Titanium Studio Workspace/Stuk/Resources/android/images/res-notlong-port-mdpi/default.png splash screen to /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/res/drawable-notlong-port-mdpi/background.png
 [DEBUG] found splash screen at /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/assets/Resources/default.png
 [TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/ApplicationStylesheet.java to javac build list
 [DEBUG] adding /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/R.java to javac build list
 [DEBUG] adding /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukActivity.java to javac build list
 [DEBUG] adding /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukAppInfo.java to javac build list
 [DEBUG] adding /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukApplication.java to javac build list
-[DEBUG] Building Java Sources: "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/ApplicationStylesheet.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/R.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukActivity.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukAppInfo.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukApplication.java"
+[DEBUG] Building Java Sources: "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/R.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukActivity.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukAppInfo.java" "/Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/gen/com/Stuk/StukApplication.java"
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: /Users/sofie/Documents/Titanium Studio Workspace/Stuk/build/android/bin/app-unsigned.apk
@@ -164,6 +89,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/img/header_tickets@2x.png
 [DEBUG] from resource zip => assets/Resources/img/header_zoeken.png
 [DEBUG] from resource zip => assets/Resources/img/header_zoeken@2x.png
+[DEBUG] from resource zip => assets/Resources/img/icon_info.png
 [DEBUG] from resource zip => assets/Resources/img/no_img.png
 [DEBUG] from resource zip => assets/Resources/img/no_img@2x.png
 [DEBUG] from resource zip => assets/Resources/img/no_thumb.png
@@ -179,6 +105,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/windows/nieuws.js
 [DEBUG] from resource zip => assets/Resources/windows/nieuws_detail.js
 [DEBUG] from resource zip => assets/Resources/windows/zoeken.js
+[DEBUG] from resource zip => assets/Resources/windows/zoekenAndroid.js
 [DEBUG] from resource zip => assets/Resources/app.js
 [DEBUG] from resource zip => assets/Resources/appicon.png
 [DEBUG] from resource zip => assets/Resources/default.png
@@ -219,6 +146,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.018295 seconds on emulator to get ready
+[DEBUG] waited 0.018701 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

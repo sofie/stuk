@@ -136,48 +136,7 @@ Ti.include(
 	    if (Ti.Platform.osname !== 'android') {
 	        Ti.UI.orientation = Ti.UI.PORTRAIT;
 	    }
-		/*// TWEEDE TAB
-		var mainWinTab2 = Stuk.ui.createNieuwsWindow();
-
-		var navTab2 = Titanium.UI.iPhone.createNavigationGroup({
-			window : mainWinTab2
-		});
-		Titanium.App.navTab2 = navTab2;
-
-		var baseWinTab2 = Titanium.UI.createWindow({
-			navBarHidden : true,
-			tabBarHidden : true
-		});
-		baseWinTab2.add(navTab2);
 		
-		// DERDE TAB
-		var mainWinTab3 = Stuk.ui.createLocatieWindow();
-
-		var navTab3 = Titanium.UI.iPhone.createNavigationGroup({
-			window : mainWinTab3
-		});
-		Titanium.App.navTab3 = navTab3;
-
-		var baseWinTab3 = Titanium.UI.createWindow({
-			navBarHidden : true,
-			tabBarHidden : true
-		});
-		baseWinTab3.add(navTab3);
-		
-		// VIERDE TAB
-		var mainWinTab4 = Stuk.ui.createInfoWindow();
-
-		var navTab4 = Titanium.UI.iPhone.createNavigationGroup({
-			window : mainWinTab4
-		});
-		Titanium.App.navTab4 = navTab4;
-
-		var baseWinTab4 = Titanium.UI.createWindow({
-			navBarHidden : true,
-			tabBarHidden : true
-		});
-		baseWinTab4.add(navTab4);
-*/
 		//TAB GROUP
 		var tab1 = Titanium.UI.createTab({
 			window : navWindow1,
@@ -199,18 +158,10 @@ Ti.include(
 		});
 		var tab4 = Titanium.UI.createTab({
 			window : navWindow4,
-			title: Stuk.tab4_name
+			title: Stuk.tab4_name,
+			icon:'/img/icon_info.png'
 		});
 
-		/*var tab2 = Titanium.UI.createTab({
-			window : baseWinTab2
-		});
-		var tab3 = Titanium.UI.createTab({
-			window : baseWinTab3
-		});
-		var tab4 = Titanium.UI.createTab({
-			window : baseWinTab4
-		});*/
 
 		tabGroup.addTab(tab1);
 		tabGroup.addTab(tab2);

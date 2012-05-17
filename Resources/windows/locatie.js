@@ -10,7 +10,7 @@
 			barImage : '/img/header.png',
 			title:Stuk.tab3_name
 		}));
-		
+
 		if(Ti.Platform.osname!=='android'){
 			var lblTitle = Titanium.UI.createLabel(Stuk.combine(style.titleBar, {
 				text : Stuk.tab3_name
@@ -56,7 +56,7 @@
 			annotations : [point]
 		});
 		scrollView.add(mapview);
-		
+
 		mapview.addEventListener('click',function(){
 			Ti.Platform.openURL('http://maps.google.com/maps?daddr=50.873666,4.699736');
 		});

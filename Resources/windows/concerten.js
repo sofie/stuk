@@ -35,7 +35,9 @@ Ti.include(
 			getData();
 		});
 		mainWin.leftNavButton = refreshButton;
-		
+		var navActInd = Titanium.UI.createActivityIndicator({
+			message:' Loading...'
+		});
 		if(Ti.Platform.osname==='android'){
 			
 			mainWin.activity.onCreateOptionsMenu = function(e) {
@@ -43,20 +45,12 @@ Ti.include(
 				  var menuItem1 = menu.add({ title: "Refresh" });
 				  menuItem1.setIcon("/img/btn_refresh.png");
 				  menuItem1.addEventListener("click", function(e) {
-				  	var navActInd = Titanium.UI.createActivityIndicator({
-						style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,
-						 message:' Loading...'
-					});
+				  	
+					mainWin.add(navActInd);
 					navActInd.show();
 					url = 'http://build.uitdatabank.be/api/events/search?format=json&key=' + Stuk.api_key + '&organiser=' + Stuk.organizer;
 					getData();
-					navActInd.hide();
 				  });
-				 /* var menuItem2 = menu.add({ title: "Search" });
-				  menuItem2.setIcon("/img/btn_zoek.png");
-				  menuItem2.addEventListener("click", function(e) {
-				 	 mainWin.containingTab.open(Stuk.ui.createSearchWindow());	
-				  });*/
 	    	};
 	    }
 
@@ -248,6 +242,9 @@ Ti.include(
 						
 						
 					});
+					if(Ti.Platform.osname==='android'){
+						navActInd.hide();
+					}
 
 					Stuk.ui.activityIndicator.hideModal();
 

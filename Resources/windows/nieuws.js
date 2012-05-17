@@ -33,6 +33,23 @@ Ti.include('/windows/nieuws_detail.js');
 			loadRSSFeed(url);
 		});
 		nieuwsWindow.rightNavButton = refreshButton;
+		var navActInd = Titanium.UI.createActivityIndicator({
+			message:' Loading...'
+		});
+		if(Ti.Platform.osname==='android'){
+			nieuwsWindow.activity.onCreateOptionsMenu = function(e) {
+		          var menu = e.menu;
+				  var menuItem1 = menu.add({ title: "Refresh" });
+				  menuItem1.setIcon("/img/btn_refresh.png");
+				  menuItem1.addEventListener("click", function(e) {
+					nieuwsWindow.add(navActInd);
+					navActInd.show();
+					url = Stuk.url_news_feed;
+					i = 0;
+					loadRSSFeed(url);
+				  });
+	    	};
+	    }
 
 		if(!Titanium.Network.online) {
 			var lblNoInternet = Ti.UI.createLabel(Stuk.combine(style.textError, {
@@ -174,6 +191,9 @@ Ti.include('/windows/nieuws_detail.js');
 
 					// Now add the items to a tableView
 					displayNieuws(itemList);
+					if(Ti.Platform.osname==='android'){
+						navActInd.hide();
+					}
 					Stuk.ui.activityIndicator.hideModal();
 
 				} catch(e) {

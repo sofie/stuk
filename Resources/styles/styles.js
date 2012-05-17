@@ -175,12 +175,19 @@
 			backgroundImage : 'img/toolbar.png'
 		},
 		viewTitleBg : {
-			width : 300,
+			width : Ti.Platform.displayCaps.platformWidth-20,
 			backgroundColor : '#ffffff',
 			height : 35,
 			left:20,
 			top : 0,
 			right : 0
+		},
+		filterView:{
+			height : 35,
+			width : Ti.Platform.displayCaps.platformWidth,
+			backgroundColor : Stuk.ui.theme.blueColor,
+			top : 0,
+			left : 0
 		},
 		
 		viewBlue : {
@@ -299,7 +306,7 @@
 		},
 		textHeading : {
 			left : 115,
-			right:10,
+			width:190,
 			bottom : 24,
 			height : 17,
 			textAlign : 'left',
@@ -450,14 +457,16 @@
 
 		//TAB2
 		titleFeeds : {
+			color : '#000',
 			height : 'auto',
 			width : 270,
+			height:43,
 			left : 20,
 			top : 5,
 			textAlign : 'left',
 			font : {
 				fontFamily : 'Arial',
-				fontSize : 18
+				fontSize : 17
 			}
 		},
 		textFeed : {
@@ -465,7 +474,7 @@
 			textAlign : 'left',
 			top : 0,
 			left : 20,
-			height : 43,
+			height : 56,
 			width : 270,
 			font : {
 				fontFamily : 'Arial',
@@ -473,7 +482,6 @@
 			}
 		},
 		feedDate : {
-			color : '#000',
 			textAlign : 'left',
 			font : {
 				fontFamily : 'Arial',
@@ -483,9 +491,20 @@
 			width : 270,
 			top : 0,
 			left : 20,
-			bottom : 10
+			bottom : 10,
+			color : '#2F6885'
 		},
-
+		filterText:{
+			color : '#2F6885',
+			font : {
+				fontFamily : 'Arial',
+				fontWeight : 'bold',
+				fontSize : 11
+			},
+			width : 73,
+			height : 35
+		},
+		
 		//
 		//ACTIVITYINDICATOR
 		//
